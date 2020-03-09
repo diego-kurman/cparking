@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  nav{
+    height: 80px;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  label.logo{
+    line-height: 80px;
+    padding: 0 110px;
+    
+  }
+  nav ul{
+    float: right;
+    margin-right: 60px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 7px;
+  }
+  nav ul li a{
+    color: rgba(51, 47, 47, 0.774);
+    font-size: 14px;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  a.active,a:hover{
+    color:rgb(35,158,226);
+    transition: .5s;
+    border-bottom: solid 2px rgb(35,158,226);
+    
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: rgba(29, 161, 128, 0.534);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgba(29, 161, 128, 0.534);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: white;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    
+  }
+
+.botao{
+    border: solid 1px rgba(218, 45, 54, 0.931);
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 30px;
+}
+
+.botao a{
+  color: rgba(218, 45, 54, 0.931);
+} 
+
+.botao a:hover{
+  color: white;
+} 
+
+.botao:hover{
+    border: solid 1px rgba(218, 45, 54, 0.931);
+    background-color: rgba(218, 45, 54, 0.931);
+}
+
+section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.container{
+  width: 100%;
+
+}
+
+.calculo{
+  width: 100%;
+  height: calc(100vh - 196px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('../img/fundoS.png');
+  background-size: cover;
+}
+
+.cardC{
+  width: 40%;
+  height: 60vh;
+  border-radius: 5px;
+  padding:5px;
+  margin-right: 20px;
+}
+
+#valorTarifa{
+  width: 100%;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  border: none;
+  padding-left: 5px;
+  border: solid 1px rgba(27, 27, 27, 0.397);
+}
+#valorTarifa:hover{
+  border-bottom: solid 2px rgb(123, 41, 170);
+}
+
+#valorTarifa:focus{
+  border-bottom: solid 2px rgb(123, 41, 170);
+}
+
+.calcular:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 ;
+  outline: 0;
+}
+
+#movimento{
+  width: 100%;
+  border-radius: 3px;
+  height: 40px;
+  font-size: 15px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  border: none;
+  margin-top: 2%;
+  padding-left: 5px;
+  border: solid 1px rgba(27, 27, 27, 0.397);
+}
+
+#movimento:hover{
+  border-bottom: solid 2px rgb(123, 41, 170);
+}
+
+#movimento:focus{
+  border-bottom: solid 2px rgb(123, 41, 170);
+}
+
+.calcular{
+  background-color:  rgb(123, 41, 170);
+  border: solid 1px  rgb(123, 41, 170);
+  border-radius: 4px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 40%;
+  margin-top: 10px;
+  cursor: pointer;
+  height: 35px;
+  font-size: 15px;
+  margin-right: auto;
+  float: right;
+}
+
+.calcular:hover{
+  background-color: rgb(93, 30, 129);
+}
+
+.calcular:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 ;
+  outline: 0;
+}
+
+.cardR{
+  width: 40%;
+  height: 60vh;
+  border-radius: 5px;
+  padding:5px;
+}
+
+#loading_content {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+  border: 3px solid #F00;
+}
+
+#loading_content:after {
+  content: "";
+  position: absolute;
+  border: 3px solid #0F0;
+  left: 15px;
+  right: 15px;
+  top: 15px;
+  bottom: 15px;
+}
+
+#loading_content:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #00F;
+  left: 5px;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+}
+
+#loading_content {
+  border: 3px solid transparent;
+  border-top-color: #4D658D;
+  border-bottom-color: #4D658D;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+#loading_content:before {
+  border: 3px solid transparent;
+  border-top-color: #D4CC6A;
+  border-bottom-color: #D4CC6A;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 3s linear infinite;
+}
+
+#loading_content:after {
+  border: 3px solid transparent;
+  border-top-color: #84417C;
+  border-bottom-color: #84417C;
+  border-radius: 50%;
+  -webkit-animation: loader 1.5s linear infinite;
+  animation: loader 1.5s linear infinite;
+    -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+}
+
+@-webkit-keyframes loaders {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+

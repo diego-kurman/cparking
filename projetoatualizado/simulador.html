@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AURORA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/simulador.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+      <!--Começo do menu-->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="./img/logoa.png" alt="" style="width: 6.5%; padding-top: 5px;"></label>
+            <ul>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./servicos.html">SERVIÇOS</a></li>
+                <li><a class="active" href="./simulador.html">SIMULADOR</a></li>
+                <li><a href="./contato.html">CONTATO</a></li>
+                <button class="botao"><a href="login.html" style="border: none;">CParking</a></button>
+            </ul>
+        </nav>
+      <!--Fim do menu-->
+
+      <div class="container">
+        <div style="margin-top: 5%;color: rgba(0, 0, 0, 0.637); height: 12%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+            <h3 style="text-align: center; font-weight: bolder; font-size: 25px;">SIMULADOR FINANCEIRO</h3>
+        </div>
+            <div style=" display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                <div style="width: 10%; background-color: rgb(123, 41, 170); height: 4px;
+                margin-top: 15px;"></div>  
+            </div>
+          <div class="calculo">
+              
+            <div class="cardC">
+                <div style="background-color: rgb(123, 41, 170); width: 100%; height: 10vh; display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;">
+                    <h3 style="font-weight: 500; color: white;">DIGITE O VALOR E O MOVIMENTO</h3>
+                </div>
+                <div style="width: 100%; height: 30vh; border: solid 1px rgba(71, 71, 71, 0.513); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 20px; background-color: white;">
+            <input type="text" id="valorTarifa" onfocus="teste()" onblur="desligar()" placeholder="Digite o Valor da Tarifa">
+            <input type="text" id="movimento" onfocus="teste()" onblur="desligar()"  placeholder="Digite seu movimento">
+            <button onclick="calcular()" class="calcular">Calcular Perda</button>
+            </div>
+        </div>
+
+        <div class="cardR">
+            <div style="background-color: rgb(51, 185, 120); width: 100%; height: 10vh; display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;">
+                <h3 style="font-weight: 500; color: white;">PERDAS</h3>
+            </div>
+            
+            <div style="width: 100%; height: 30vh; border: solid 1px rgba(71, 71, 71, 0.513); border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; padding: 20px; background-color: white;">
+            <div id="saida" style="display: none;">
+                <div style="width: 100%; border: solid 1px rgba(27, 27, 27, 0.397);border-left: solid 3px rgb(51, 185, 120); border-radius: 4px; padding:10px;">
+                <p style="font-weight: 500; font-size: 20px;">PERDA POR MOTORISTA: R$<span id="perda1"></span></p>
+                </div>
+
+                <div style="width: 100%; border: solid 1px rgba(27, 27, 27, 0.397);border-left: solid 3px rgb(51, 185, 120); border-radius: 4px; padding:10px; margin-top: 2%;">
+                <p style="font-weight: 500; font-size: 20px;">PERDA DIARIA: R$<span id="perda2"></span></p>
+                </div>
+
+                <div style="width: 100%; border: solid 1px rgba(27, 27, 27, 0.397);border-left: solid 3px rgb(51, 185, 120); border-radius: 4px; padding:10px; margin-top: 2%;">
+                <p style="font-weight: 500; font-size: 20px;">PERDA MENSAL: R$<span id="perda3"></span></p>
+                </div>
+                
+            </div>
+            <div id="loading_content" style="display: none;" ></div>
+        </div>
+        </div>
+        </div>
+
+            
+      </div>
+
+
+  </body>
+</html>
+
+<script>
+    
+    function teste(){
+        var form = document.getElementById("loading_content");
+        loading_content.style.display = "block";
+    }
+
+    function desligar(){
+        loading_content.style.display = "none";
+
+    }
+    
+    function calcular(){
+        var tarifa = Number(valorTarifa.value);
+        var movi = Number(movimento.value);
+        loading_content.style.display = "none";
+
+        var perda = (tarifa * 0.33);
+        var perdaDiaria = perda * movi;
+        var perdaMensal = perdaDiaria * 30;
+
+        saida.style.display = 'block';
+        perda1.innerHTML = perda.toFixed(2);
+        perda2.innerHTML = perdaDiaria.toFixed(2);
+        perda3.innerHTML = perdaMensal.toFixed(2);
+
+    }
+
+</script>

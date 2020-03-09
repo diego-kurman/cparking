@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  nav{
+    height: 80px;
+    width: 100%;
+    background-color: #f6f6f6;
+  }
+  label.logo{
+    line-height: 80px;
+    padding: 0 110px;
+    
+  }
+  nav ul{
+    float: right;
+    margin-right: 60px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 7px;
+  }
+  nav ul li a{
+    color: rgba(51, 47, 47, 0.774);
+    font-size: 14px;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  a.active,a:hover{
+    color: rgb(35,158,226);
+    transition: .5s;
+    border-bottom: solid 2px rgb(35,158,226);
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: rgba(29, 161, 128, 0.534);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: rgba(29, 161, 128, 0.534);
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: white;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+    
+  }
+
+.botao{
+    border: solid 1px rgba(218, 45, 54, 0.931);
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 30px;
+}
+
+.botao a{
+  color: rgba(218, 45, 54, 0.931);
+} 
+
+.botao a:hover{
+  color: white;
+} 
+
+.botao:hover{
+    border: solid 1px rgba(218, 45, 54, 0.931);
+    background-color: rgba(218, 45, 54, 0.931);
+}
+
+section{
+    background: url(bg1.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+}
+
+.conteiner{
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url('../img/Untitled-2-01.png');
+  background-size: cover;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 180px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: sans-serif;
+  text-align: center;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+.card-image {
+  grid-area: image;
+  background: url("../img/cloud.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-text {
+  grid-area: text;
+  margin: 25px;
+}
+.card-text .date {
+  color: rgb(17,108,173);
+  font-size:13px;
+}
+.card-text p {
+  color: grey;
+  font-size:15px;
+  font-weight: 300;
+}
+.card-text h2 {
+  margin-top:0px;
+  font-size:28px;
+}
+.card-stats {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(17,108,173);
+}
+.card-stats .stat {
+  padding:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+.card-stats .border {
+  border-left: 1px solid rgb(14, 89, 143);
+  border-right: 1px solid rgb(14, 89, 143);
+}
+.card-stats .value{
+  font-size:22px;
+  font-weight: 500;
+}
+.card-stats .value sup{
+  font-size:12px;
+}
+.card-stats .type{
+  font-size:11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+/*card2*/
+.card-image.card2 {
+  background: url("../img/aplicacao.png");
+  background-size: cover;
+}
+.card-text.card2 .date {
+  color: rgb(71,171,118);
+}
+.card-stats.card2 .border {
+  border-left: 1px solid rgb(42, 138, 87);
+  border-right: 1px solid rgb(42, 138, 87);
+}
+.card-stats.card2 {
+  background: rgb(71,171,118);
+}
+/*card3*/
+.card-image.card3 {
+  background: url("../img/dev.png");
+  background-size: cover;
+}
+.card-text.card3 .date {
+  color: rgb(123, 41, 170);
+}
+.card-stats.card3 .border {
+  border-left: 1px solid rgb(123, 41, 170);
+  border-right: 1px solid rgb(123, 41, 170);
+}
+.card-stats.card3 {
+  background: rgba(161, 65, 217, 0.89);
+}
+
