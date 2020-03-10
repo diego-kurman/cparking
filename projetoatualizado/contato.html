@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>AURORA</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/contato.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
-      <!--Começo do menu-->
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo"><img src="./img/logoa.png" alt="" style="width: 6.5%; padding-top: 5px;"></label>
-            <ul>
-                <li><a href="./index.html">HOME</a></li>
-                <li><a href="./servicos.html">SERVIÇOS</a></li>
-                <li><a href="./simulador.html">SIMULADOR</a></li>
-                <li><a  class="active" href="./contato.html">CONTATO</a></li>
-                <button class="botao"><a href="login.html"  style="border: none;">CParking</a></button>
-            </ul>
-        </nav>
-      <!--Fim do menu-->
 
-      <div class="container">
-          <div class="form">
-            <div style="color: rgba(0, 0, 0, 0.637); height: 12%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                <h3 style="text-align: center; font-weight: bolder; font-size: 25px;">FORMULÁRIO PARA CONTATO</h3>
-            </div>
-                <div style=" display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                    <div style="width: 10%; background-color: rgb(13, 81, 129); height: 4px;"></div>  
-                </div>
-              <div class="inputs">
-                <h3 style="font-family:sans-serif; color: rgba(0, 0, 0, 0.637); font-weight: bold;">CONTATO</h3>
-                <p style="font-weight: 300;">Entre em contato conosco pelo formulário abaixo.</p>  
-                    <form action="">
-                        <input type="text" placeholder="Nome" id="nome">
-                        <input type="text" placeholder="Email" id="email">
-                        <input type="text" placeholder="Assunto" id="assunto">
-                        <textarea name="comentário" rows="10" cols="40" id="mensagem" placeholder="Mensagem"></textarea>
-                    <center><button id="enviar">Enviar</button></center>    
-                    </form>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <title>Imagine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/contato.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="icon" href="./img/imagine.png" />
+</head>
+
+<body>
+  <!--Começo do menu-->
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo"><img src="./img/imagine.png" alt="" style="width: 6.5%; padding-top: 5px;"></label>
+    <ul>
+      <li><a href="./index.html">HOME</a></li>
+      <li><a href="./servicos.html">SERVIÇOS</a></li>
+      <!--<li><a href="./projeto.html">PROJETO</a></li>-->
+      <li><a href="./simulador.html">SIMULADOR</a></li>
+      <li><a class="active" href="./contato.html">CONTATO</a></li>
+      <button class="botao"><a href="login.html" style="border: none;">CParking</a></button>
+    </ul>
+  </nav>
+  <!--Fim do menu-->
+
+  <div class="container">
+    <div class="form">
+      <div class="formM">
+        <h3 class="txtF">FORMULÁRIO PARA CONTATO</h3>
+      </div>
+      <div class="centR">
+        <div class="risca"></div>
+      </div>
+      <div class="inputs">
+        <h3 class="inputC">CONTATO</h3>
+        <p style="font-weight: 300;">Entre em contato conosco pelo formulário abaixo.</p>
+        <form action="">
+          <input type="text" placeholder="Nome" id="nome">
+          <input type="text" placeholder="Email" id="email">
+          <input type="text" placeholder="Assunto" id="assunto">
+          <textarea name="comentário" rows="10" cols="40" id="mensagem" placeholder="Mensagem"></textarea>
+          <center><button id="enviar">Enviar</button></center>
+        </form>
       </div>
 
+    </div>
 
 
-  </body>
+
+</body>
+
 </html>

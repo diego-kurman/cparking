@@ -31,7 +31,7 @@
   nav ul li a{
     color: rgba(51, 47, 47, 0.774);
     font-size: 14px;
-    padding: 7px 20px;
+    padding: 7px 12px;
     border-radius: 3px;
     font-weight: bold;
   }
@@ -232,7 +232,7 @@ section{
 #enviar{
     background-color: rgb(17,108,173);
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -241,6 +241,7 @@ section{
     cursor: pointer;
     height: 45px;
     font-size: 15px;
+
 }
 
 #enviar:hover{
@@ -252,4 +253,36 @@ section{
     outline: 0;
 }
 
+.formM{
+  color: rgba(0, 0, 0, 0.637);
+  height: 12%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.txtF{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.centR{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.risca{
+  width: 10%;
+  background-color: rgb(13, 81, 129);
+  height: 4px;
+}
+
+.inputC{
+  font-family:sans-serif;
+  color: rgba(0, 0, 0, 0.637);
+  font-weight: bold;
+}
